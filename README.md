@@ -63,7 +63,7 @@ Capacity estimation is the process of determining the resources (such as storage
         - If one upload is transcoded into 4 formats, compute power must handle 4×720,000=2.88million hours/day.
    - **Analytics:** Real-time analytics for 2 billion users require significant compute resources.
      
-4. Database and Metadata:
+4. **Database and Metadata:**
   - **Metadata:** Store information like video titles, descriptions, tags, and user interactions.
       - Assume each video has 1 KB of metadata. For 720,000×1KB=720MB/day.
 
