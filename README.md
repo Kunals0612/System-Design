@@ -15,7 +15,7 @@ Buy More Machine: Horizontal Scaling.
 
 ## Difference between Horizontal Scaling and Vertical Scaling
 
-| **Aspect**              | **Horizontal Scaling**                          | **Vertical Scaling**                           |
+| **Aspect**               | **Horizontal Scaling**                         | **Vertical Scaling**                          |
 |--------------------------|------------------------------------------------|-----------------------------------------------|
 | **Definition**           | Adding more servers or machines to a system.   | Upgrading the resources of a single machine.  |
 | **Capacity Expansion**   | Increases capacity by adding more nodes.       | Increases capacity by enhancing a single node.|
@@ -463,5 +463,10 @@ Thrashing can be minimized with proper memory management, efficient paging polic
    A program is a passive entity, which is a file containing a list of instructions stored on a disk (often called an executable file). A process on the other hand is an active entity with a program counter specifying the next               instruction to be executed and a set of associated resources. A program becomes a process when an executable file is loaded into memory.
 
 
-
-
+   | **PROGRAM**                                          | **PROCESS**                                    |
+|------------------------------------------------------|-----------------------------------------------|
+| It consists of instructions in any programming language. | It consists of instructions in machine code.   |
+| It resides in the secondary storage device.          | It resides in the main memory.                |
+| The program only needs memory for storage.           | The resource requirement is quite high in the case of a process. |
+| Its life span is unlimited.                          | Its life span is limited.                     |
+| It is a passive entity.                              | It is an active entity.                       |
