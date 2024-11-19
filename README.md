@@ -450,4 +450,11 @@ Thrashing occurs in a computer system when the operating system spends a signifi
 
 Thrashing can be minimized with proper memory management, efficient paging policies, and balanced system load, ensuring optimal performance.
 
+# Difference between process, program and thread? 
+
+  - A program consists of instructions in any programming language.
+    
+  - A process consists of instructions in machine code. A program in execution is called a process.
+    
+  - Thread is the basic unit of execution or CPU utilization. 
 
