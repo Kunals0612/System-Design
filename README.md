@@ -90,6 +90,8 @@ To encrypt communications HTTPS uses an encryption protocol called Transport Lay
 HTTPS protocol uses the 443 port number for communicating the data.
   
 # TCP/IP Protocol
+![TCP](https://github.com/user-attachments/assets/5d293b10-fde0-4796-832e-271fd4bbe9ea)
+
 
 
 
