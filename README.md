@@ -211,10 +211,10 @@ Relational databases are a type of database that organizes data into tables (als
    Ensured through constraints such as primary keys, foreign keys, and rules to maintain consistency and accuracy.
    
 **Advantages:**
-   Data Accuracy and Consistency: Enforced through schema and constraints.
-   Flexibility: Easy to update, delete, and query data.
-   Scalability: Supports large-scale data management.
-   Relationships: Enables complex queries across related tables.
+   - Data Accuracy and Consistency: Enforced through schema and constraints.
+   - Flexibility: Easy to update, delete, and query data.
+   - Scalability: Supports large-scale data management.
+   - Relationships: Enables complex queries across related tables.
    
 **Examples of Relational Database Management Systems (RDBMS):**
    - MySQL
