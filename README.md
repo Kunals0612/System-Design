@@ -42,6 +42,11 @@ Capacity estimation is the process of determining the resources (such as storage
 4. **Plan for Scalability:**
    - Allow headroom for future growth.
    - Decide on horizontal or vertical scaling.
+## Capacity Estimation of YouTube.
+1. **Storage Capacity:**
+   - **Uploads:** Assume YouTube receives 500 hours of video per minute.
+        - *Duration per Day:* 500 hours/minute × 60 minutes/hour × 24 hours/day = 720,000 hours/day.
+
 
 
 
