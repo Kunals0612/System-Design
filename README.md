@@ -13,6 +13,17 @@ Buy Bigger Machine: Vertical Scaling.
 
 Buy More Machine: Horizontal Scaling.
 
+## Difference between Horizontal Scaling and Vertical Scaling
+
+| **Aspect**              | **Horizontal Scaling**                          | **Vertical Scaling**                           |
+|--------------------------|------------------------------------------------|-----------------------------------------------|
+| **Definition**           | Adding more servers or machines to a system.   | Upgrading the resources of a single machine.  |
+| **Capacity Expansion**   | Increases capacity by adding more nodes.       | Increases capacity by enhancing a single node.|
+| **Scalability**          | Virtually unlimited (can add more nodes).      | Limited by hardware capacity.                 |
+| **Cost**                 | Requires additional machines or cloud instances.| Involves upgrading hardware, which may be costly. |
+| **Examples**             | Adding multiple servers in a cluster.          | Upgrading RAM or CPU of an existing server.   |
+| **Fault Tolerance**      | Higher (failure in one server doesn’t stop the system). | Lower (single point of failure).     |
+| **Implementation**       | Needs load balancers and distributed systems.  | Easier to implement; just upgrade the machine.|
 
 
 
