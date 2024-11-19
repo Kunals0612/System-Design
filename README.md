@@ -335,6 +335,9 @@ A **NoSQL database** is a type of database designed to handle large volumes of u
 
 NoSQL databases are particularly suited for modern applications that require flexibility, scalability, and efficient handling of diverse data types.
 
+# What is Cache Memory ?
+
+![Cache](https://github.com/user-attachments/assets/51046b0e-4953-4688-9dc8-66ce3429df11)
 
 
 
