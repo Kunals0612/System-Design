@@ -1,5 +1,16 @@
 # System-Design
 Unlock the secrets of building scalable, robust, and efficient systems with our comprehensive System Design Tutorial! 🎯 
 ## Topics.
-- [Basic](https://github.com/Kunals0612/System-Design)
+- [**Basic**](https://github.com/Kunals0612/System-Design)
   - What is System Design?
+  - Horizontal and Vertical Scaling
+  - What is Capacity Estimation?
+  - What is HTTP?
+  - What is the Internet TCP/IP stack?
+  - What happens when you enter Google.com?
+  - What are Relational Databases?
+  - What are Database Indexes?
+  - What are NoSQL databases?
+  - What is a Cache?
+  - What is Thrashing?
+  - What are Threads?
