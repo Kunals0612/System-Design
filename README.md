@@ -113,9 +113,9 @@ The TCP model is subdivided into five layers, each containing specific protocols
    
    The network layer adds IP address/logical address to the data segments to form IP packets and finds the best possible path for data delivery. IP addresses are addresses allocated to a 
    device to uniquely identify it on a global scale. Common protocols used in the Network layer are
-   - IP(Internet Protocol): IP uses the receiver’s IP address to determine the best path for the proper delivery of packets to the destination. When a packet is too large to send over a    
-     network medium, the sender host's IP splits it up into smaller fragments. The fragments are reassembled into the original packet on the receiving host. IP is unreliable since it does not 
-     ensure delivery or check for errors.
+   - IP(Internet Protocol): IP uses the receiver’s IP address to determine the best path for the proper delivery of packets to the destination.
+     When a packet is too large to send over a network medium, the sender host's IP splits it up into smaller fragments. The fragments are reassembled into the original packet on the receiving 
+     host. IP is unreliable since it does not ensure delivery or check for errors.
    - ARP(Address Resolution Protocol): ARP is used to find MAC/physical Addresses from the IP address.
    - ICMP(Internet Control Message Protocol): ICMP is responsible for error reporting.
      
