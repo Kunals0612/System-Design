@@ -9,8 +9,9 @@ System design is the process of defining the architecture, components, modules, 
 
 **Vertical Scaling**: : Upgrading the resources (CPU, RAM, storage) of a single machine or server to handle increased demand. It enhances performance but is limited by hardware capacity.
 
-E.g. Buy Bigger Machine: Vertical Scaling.
-     Buy More Machine: Horizontal Scaling.
+Buy Bigger Machine: Vertical Scaling.
+
+Buy More Machine: Horizontal Scaling.
 
 
 
