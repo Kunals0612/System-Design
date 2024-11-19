@@ -199,12 +199,15 @@ Relational databases are a type of database that organizes data into tables (als
    Rows represent records or individual entries.
    Columns represent attributes or fields of the records.
 2. **Keys:**
+   
    **Primary Key:** A unique identifier for each row in a table.
+   
    **Foreign Key:** A field in one table that refers to the primary key in another table, establishing a relationship.
+   
    **Schema:** Relational databases follow a well-defined structure or schema that specifies how tables are related and the types of data stored.
-3. **SQL (Structured Query Language):**
+4. **SQL (Structured Query Language):**
    Used for querying and manipulating data in relational databases.
-4. **Data Integrity:**
+5. **Data Integrity:**
    Ensured through constraints such as primary keys, foreign keys, and rules to maintain consistency and accuracy.
    
 **Advantages:**
