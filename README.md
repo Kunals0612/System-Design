@@ -105,8 +105,9 @@ The TCP model is subdivided into five layers, each containing specific protocols
 2. **Data Link Layer(DLL)**
    - The DLL is subdivided into 2 layers: MAC(Media Access Control), LLC(Logical Link Control)
    - The MAC layer is responsible for data encapsulation(Framing) of IP packets from the network layer into frames. Framing means DLL adds a header(which contains the MAC address of source and      destination) and a trailer(which contains error-checking data) at the beginning and end of IP packets.
-   - LLC deals with flow control and error control. Flow control: Limits how much data a sender can transfer without overwhelming the receiver. Error Control: Error in the data transmission    
-     can be detected by checking the error detection bits in the trailer of the frame.
+   - LLC deals with flow control and error control.
+   - Flow control: Limits how much data a sender can transfer without overwhelming the receiver.
+   - Error Control: Error in the data transmission can be detected by checking the error detection bits in the trailer of the frame.
      
 3. **Network Layer**
    
