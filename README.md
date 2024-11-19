@@ -43,9 +43,30 @@ Capacity estimation is the process of determining the resources (such as storage
    - Allow headroom for future growth.
    - Decide on horizontal or vertical scaling.
 ## Capacity Estimation of YouTube.
+
 1. **Storage Capacity:**
    - **Uploads:** Assume YouTube receives 500 hours of video per minute.
         - *Duration per Day:* 500 hours/minute × 60 minutes/hour × 24 hours/day = 720,000 hours/day.
+   - **Video Quality:** Assume an average of 1080p resolution (~1 GB per hour).
+        - *Storage per Day:*  720,000 hours/day × 1GB/hour=720,000GB/day (720 TB/day).
+        - *Annual Storage:* 720 TB/day × 365 days/year = 262,800 TB/year (~263 PB/year).
+          
+2. **Bandwidth Capacity:**
+   - **Average Users:** Assume 2 billion users watch videos daily.
+   - **Average Watch Time:** Assume each user watches 1 hour of video daily.
+        - *Daily Video Playback:* 2 billion users×1 hour/user=2 billion hours/day.
+   - **Data Transfer:** At 1080p (~1 GB/hour):
+        - 2 billion hours/day×1 GB/hour = 2,000,000TB/day (~2 EB/day).
+          
+3. **Compute Power:**
+   - **Transcoding:** Every uploaded video is transcoded into multiple resolutions (e.g., 240p, 360p, 720p, 1080p).
+        - If one upload is transcoded into 4 formats, compute power must handle 4×720,000=2.88million hours/day.
+   - **Analytics:** Real-time analytics for 2 billion users require significant compute resources.
+     
+4. Database and Metadata:
+  - **Metadata:** Store information like video titles, descriptions, tags, and user interactions.
+      - Assume each video has 1 KB of metadata. For 720,000×1KB=720MB/day.
+
 
 
 
