@@ -481,3 +481,23 @@ A process includes a stack, data section, and heap. Stack contains temporary dat
 | It takes less time in context switching.               | It takes more time in context switching.          |
 | A thread is lightweight. Each thread in the process shares code, data, and resources. | A process is called a heavyweight process.       |
 
+# Types of Processes
+
+There are two types of event-specific processes:
+
+### 1. **I/O Bound Process**
+- A program/process that spends more of its time performing I/O operations than computations.
+- Example: Reading and writing to a disk or communicating with external devices.
+
+### 2. **CPU Bound Process**
+- A program/process that spends more of its time performing CPU operations (computations) and generates I/O requests infrequently.
+- Example: Complex calculations, data processing, or simulations.
+
+---
+
+## Summary
+
+- A **program** consists of a list of instructions stored on a hard disk.
+- When the program is loaded into RAM and starts running, it becomes a **process**.
+- A **thread** is the smallest unit of execution managed by the operating system.
+- There are two main types of processes: **I/O bound processes** and **CPU bound processes**.
