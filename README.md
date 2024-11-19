@@ -387,6 +387,67 @@ Thrashing occurs in a computer system when the operating system spends a signifi
 
 ![Thrashing](https://github.com/user-attachments/assets/f4dc5f06-c806-4b17-8ba5-6e7361692c89)
 
+## Causes of Thrashing
 
+### 1. High Degree of Multiprogramming
+- When too many processes are running concurrently, the system might not have enough memory to keep the working set of all processes in RAM, leading to excessive paging.
+
+### 2. Insufficient Physical Memory
+- If the system has more active processes than its physical memory can handle, it will rely heavily on swapping to virtual memory (disk), causing frequent page faults.
+
+### 3. Small Page Frames
+- Allocating small page frames can increase the likelihood of page faults since fewer pages of a process can reside in memory at a time.
+
+### 4. Poorly Tuned Paging Algorithms
+- Inefficient algorithms for page replacement can result in unnecessary page swapping. For example, replacing a page that is still heavily used can increase thrashing.
+
+### 5. Rapidly Changing Working Sets
+- Processes with dynamic or unpredictable working sets (the set of pages a process actively uses) can lead to frequent page faults.
+
+### 6. Inadequate or Excessive Multiprogramming
+- If the degree of multiprogramming (number of processes in memory) is too low or too high, the system might fail to allocate memory effectively, leading to thrashing.
+
+---
+
+## Symptoms of Thrashing
+
+- Significant slowdown in system performance.
+- High disk I/O activity due to frequent paging.
+- Processes may appear to "hang" or respond very slowly.
+- High CPU utilization without corresponding progress in task execution.
+
+---
+
+## How to Prevent Thrashing
+
+### 1. Adjust the Degree of Multiprogramming
+- Reduce the number of active processes so that the working set of each process fits into memory.
+
+### 2. Increase Physical Memory
+- Add more RAM to the system to accommodate larger working sets.
+
+### 3. Optimize Paging Policies
+- Use efficient page replacement algorithms like **LRU (Least Recently Used)** or **MRU (Most Recently Used)** to minimize unnecessary page swaps.
+
+### 4. Working Set Model
+- Use a working set model to monitor the memory needs of processes and ensure that each process has enough memory to avoid excessive page faults.
+
+### 5. Dynamic Allocation
+- Allocate memory to processes dynamically based on their actual usage and working set size.
+
+### 6. Use Load Balancing
+- Distribute workload across multiple systems or processes to reduce memory pressure on a single system.
+
+---
+
+## Example of Thrashing
+
+- Imagine a system with **4 GB of physical memory** running **10 processes**, each requiring **600 MB** of working set memory.  
+  - Total memory demand = 10 × 600 MB = **6 GB**.  
+  - Since the demand exceeds available physical memory, the system will rely heavily on swapping, causing constant page faults and resulting in thrashing.
+
+---
+
+Thrashing can be minimized with proper memory management, efficient paging policies, and balanced system load, ensuring optimal performance.
 
 
