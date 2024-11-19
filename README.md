@@ -1,7 +1,7 @@
 # System-Design
 Unlock the secrets of building scalable, robust, and efficient systems with our comprehensive System Design Tutorial! 🎯 
 ## Topics.
-- [**Basic**](https://github.com/Kunals0612/System-Design](https://github.com/Kunals0612/System-Design/tree/Basic)
+- [**Basic**](https://github.com/Kunals0612/System-Design/tree/Basic)
   - What is System Design?
   - Horizontal and Vertical Scaling
   - What is Capacity Estimation?
