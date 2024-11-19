@@ -470,3 +470,7 @@ Thrashing can be minimized with proper memory management, efficient paging polic
 | The program only needs memory for storage.           | The resource requirement is quite high in the case of a process. |
 | Its life span is unlimited.                          | Its life span is limited.                     |
 | It is a passive entity.                              | It is an active entity.                       |
+
+A process includes a stack, data section, and heap. Stack contains temporary data such as function parameters, return address, and local variables. The data section contains global variables. Heap is a memory that is dynamically allocated during process runtime.
+
+
