@@ -97,18 +97,19 @@ The TCP model is subdivided into five layers, each containing specific protocols
 ![TCP](https://github.com/user-attachments/assets/5d293b10-fde0-4796-832e-271fd4bbe9ea)
 
 ## **Layers of TCP model**
-1. Physical Layer
+1. **Physical Layer**
    - The physical layer translates message bits into signals for transmission on a medium, i.e. the physical layer is the place where the real communication takes place.
    - Signals are generated depending on the type of media used to connect two devices. For example, electrical signals are generated for copper cables, light signals are generated for optical       fibers, and radio waves are generated for air or vacuum.
    - Physical layer also specifies characteristics like topology(bus,star,hybrid,mesh,ring), line configuration(point-to-point, multipoint) and transmission mode(simplex, half-duplex, full-         duplex).
      
-2. Data Link Layer(DLL)
+2. **Data Link Layer(DLL)**
    - The DLL is subdivided into 2 layers: MAC(Media Access Control), LLC(Logical Link Control)
    - The MAC layer is responsible for data encapsulation(Framing) of IP packets from the network layer into frames. Framing means DLL adds a header(which contains the MAC address of source and      destination) and a trailer(which contains error-checking data) at the beginning and end of IP packets.
    - LLC deals with flow control and error control. Flow control: Limits how much data a sender can transfer without overwhelming the receiver. Error Control: Error in the data transmission    
      can be detected by checking the error detection bits in the trailer of the frame.
      
-3. Network Layer
+3. **Network Layer**
+   
    The network layer adds IP address/logical address to the data segments to form IP packets and finds the best possible path for data delivery. IP addresses are addresses allocated to a 
    device to uniquely identify it on a global scale. Common protocols used in the Network layer are
    - IP(Internet Protocol): IP uses the receiver’s IP address to determine the best path for the proper delivery of packets to the destination. When a packet is too large to send over a    
@@ -117,7 +118,8 @@ The TCP model is subdivided into five layers, each containing specific protocols
    - ARP(Address Resolution Protocol): ARP is used to find MAC/physical Addresses from the IP address.
    - ICMP(Internet Control Message Protocol): ICMP is responsible for error reporting.
      
-4. Transport Layer 
+4. **Transport Layer**
+   
    The transport layer is in charge of flow control (controlling the rate at which data is transferred), end-to-end connectivity, and error-free data transmission. Protocols used in the           Transport layer:
    
    TCP(Transmission Control Protocol): 
@@ -129,7 +131,8 @@ The TCP model is subdivided into five layers, each containing specific protocols
       - UDP is a connectionless protocol, which means it does not require the establishment and termination of connections between devices.
       - UDP does not support segmentation and lacks error checking and correction which makes it less reliable but more cost-efficient.
         
-6. Application Layer
+5. **Application Layer**
+   
    This is the uppermost layer, which combines the OSI model's session, presentation, and application layers. Users can interact with the application and access network resources through this     layer.
    
    Protocols used in the Application layer:
