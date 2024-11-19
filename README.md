@@ -456,5 +456,12 @@ Thrashing can be minimized with proper memory management, efficient paging polic
     
   - A process consists of instructions in machine code. A program in execution is called a process.
     
-  - Thread is the basic unit of execution or CPU utilization. 
+  - Thread is the basic unit of execution or CPU utilization.
+
+## Defination
+
+   A program is a passive entity, which is a file containing a list of instructions stored on a disk (often called an executable file). A process on the other hand is an active entity with a program counter specifying the next               instruction to be executed and a set of associated resources. A program becomes a process when an executable file is loaded into memory.
+
+
+
 
