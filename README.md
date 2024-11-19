@@ -186,6 +186,40 @@ So back to the main question of what happens when you type www.google.com or any
 - Finally, the chosen server then sends the HTML, CSS, and Javascript files (If any) back to the OS who in turn gives it to the browser to interpret it. And then you get your website as you 
   know it.
 
+# What are Relational Databases ?
+
+Relational databases are a type of database that organizes data into tables (also known as relations) with rows and columns. Each table stores data about a specific entity, and relationships between these tables are established through keys.
+
+![RelationalDB](https://github.com/user-attachments/assets/e56481f8-e528-4764-aa89-77853411985c)
+
+**Key Characteristics of Relational Databases:**
+
+1. **Data Organization:**
+   Data is stored in tables, where each table represents a specific type of information (e.g., customers, products).
+   Rows represent records or individual entries.
+   Columns represent attributes or fields of the records.
+2. **Keys:**
+   **Primary Key:** A unique identifier for each row in a table.
+   **Foreign Key:** A field in one table that refers to the primary key in another table, establishing a relationship.
+   **Schema:** Relational databases follow a well-defined structure or schema that specifies how tables are related and the types of data stored.
+3. **SQL (Structured Query Language):**
+   Used for querying and manipulating data in relational databases.
+4. **Data Integrity:**
+   Ensured through constraints such as primary keys, foreign keys, and rules to maintain consistency and accuracy.
+   
+**Advantages:**
+   Data Accuracy and Consistency: Enforced through schema and constraints.
+   Flexibility: Easy to update, delete, and query data.
+   Scalability: Supports large-scale data management.
+   Relationships: Enables complex queries across related tables.
+   
+**Examples of Relational Database Management Systems (RDBMS):**
+   - MySQL
+   - PostgreSQL
+   - Oracle Database
+   - Microsoft SQL Server
+   - SQLite
+
 
 
 
