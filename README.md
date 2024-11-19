@@ -347,8 +347,6 @@ When the processor makes a request for memory reference, the request is first so
 
 In the cache miss, the requested element is brought from a subsequent memory level from the memory hierarchy and placed in the cache.
 
-![Cache2](https://github.com/user-attachments/assets/047ba703-f6e8-4152-aeed-d7e059a5207b)
-
 A block of elements is transferred from main memory to cache memory by expecting that the next requested element will be residing in the neighboring locality of the current requested element (spatial locality) and this has to happen under one memory access time.
 
 The performance of cache memory is calculated in terms of hit ratio.
@@ -363,6 +361,9 @@ Cache performance can be improved by using:
 - Reduce miss penalty 
 - Reduce the time to hit in the cache.
 - Cache underlying principle is the locality of reference
+  
+![Cache2](https://github.com/user-attachments/assets/047ba703-f6e8-4152-aeed-d7e059a5207b)
+
 
 In the locality of reference, huge data is placed in a small area (data which is needed) so that the access time will be less and the performance will be higher.
 
