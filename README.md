@@ -381,4 +381,10 @@ There are three methods for filling a cache lines
 - Direct mapped - The most basic
 - Self associated - A combination of the two.
 
+# Why does the thrashing occurs ?
+
+Thrashing occurs in a computer system when the operating system spends a significant amount of time swapping pages in and out of memory instead of executing actual processes. It leads to a dramatic drop in system performance and is       often caused by an inefficient allocation of memory resources.
+
+
+
 
