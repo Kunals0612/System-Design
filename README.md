@@ -385,6 +385,8 @@ There are three methods for filling a cache lines
 
 Thrashing occurs in a computer system when the operating system spends a significant amount of time swapping pages in and out of memory instead of executing actual processes. It leads to a dramatic drop in system performance and is       often caused by an inefficient allocation of memory resources.
 
+![Thrashing](https://github.com/user-attachments/assets/f4dc5f06-c806-4b17-8ba5-6e7361692c89)
+
 
 
 
