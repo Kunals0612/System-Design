@@ -30,16 +30,16 @@ Buy More Machine: Horizontal Scaling.
 Capacity estimation is the process of determining the resources (such as storage, bandwidth, processing power, and memory) required to handle the workload of a system or application efficiently. This helps in planning infrastructure to ensure smooth performance under expected or peak loads.
 
 ## Steps for Capacity Estimation 
-1. Understand the system's Requirements
+1. **Understand the system's Requirements:**
    - Define the scope (e.g., storage, bandwidth, compute power).
    - Identify the expected load (e.g., number of users, requests, data size).
-2. Analyze Workload:
+2. **Analyze Workload:**
    - Estimate the average and peak usage patterns.
    - Measure key metrics like requests per second (RPS), data size, and latency.
-3. Break Down Resource Usage:
+3. **Break Down Resource Usage:**
    - Calculate storage for data (e.g., videos, metadata).
    - Compute processing power for operations (e.g., transcoding, analytics).
-4. Plan for Scalability:
+4. **Plan for Scalability:**
    - Allow headroom for future growth.
    - Decide on horizontal or vertical scaling.
 
