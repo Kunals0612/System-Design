@@ -337,6 +337,10 @@ NoSQL databases are particularly suited for modern applications that require fle
 
 # What is Cache Memory ?
 
+Cache memory is a small fast memory that holds copies of recently accessed instructions and data. 
+
+The effectiveness of the cache mechanism is based on the property of locality of reference. It means many instructions for local areas of the program are executed repeatedly. The active segments of the program are placed in cache memory by reducing the total execution time. 
+
 ![Cache](https://github.com/user-attachments/assets/51046b0e-4953-4688-9dc8-66ce3429df11)
 
 
