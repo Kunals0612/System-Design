@@ -473,4 +473,11 @@ Thrashing can be minimized with proper memory management, efficient paging polic
 
 A process includes a stack, data section, and heap. Stack contains temporary data such as function parameters, return address, and local variables. The data section contains global variables. Heap is a memory that is dynamically allocated during process runtime.
 
+| **THREAD**                                             | **PROCESS**                                        |
+|--------------------------------------------------------|---------------------------------------------------|
+| Threads are easier to create and terminate.            | Processes are not easy to create and terminate.   |
+| Multiple threads in the same process share the same address. | Processes do not share the same address.          |
+| It is easy to communicate between the threads.         | To communicate between processes, we need operating system intervention. |
+| It takes less time in context switching.               | It takes more time in context switching.          |
+| A thread is lightweight. Each thread in the process shares code, data, and resources. | A process is called a heavyweight process.       |
 
