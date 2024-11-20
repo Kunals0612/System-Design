@@ -102,4 +102,9 @@ Dynamic load balancing involves making real-time decisions regarding the distrib
 
 Consistent hashing is a distributed hashing technique used in computer science and distributed systems to achieve load balancing and minimize the need for rehashing when the number of nodes in a system changes. It is particularly useful in distributed hash tables (DHTs), distributed caching systems, and other distributed storage systems.
 
+![ConsistentHashing](https://github.com/user-attachments/assets/2d7ef2c7-e825-4bc0-8c0a-a97aa581edfa)
+
+## After Failure of any server
+
+
 
