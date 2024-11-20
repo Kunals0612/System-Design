@@ -106,5 +106,8 @@ Consistent hashing is a distributed hashing technique used in computer science a
 
 ## After Failure of any server
 
+![ConsistentHashingRemoving](https://github.com/user-attachments/assets/60a377b4-eebb-4a59-b076-7354b12149a2)
+
+
 
 
