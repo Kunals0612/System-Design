@@ -96,3 +96,6 @@ Dynamic load balancing involves making real-time decisions regarding the distrib
 
 ## Least Response Time Based Algorithm: 
 
+![LeastResponseTime ](https://github.com/user-attachments/assets/6ed153dc-4a45-4377-a4f5-1d89b0fcba17)
+
+
