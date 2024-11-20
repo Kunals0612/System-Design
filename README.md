@@ -78,4 +78,8 @@ Dynamic load balancing involves making real-time decisions regarding the distrib
 - **Least Connection Method:** Sends requests to the server with the fewest active connections.
 - **Least Response Time Method:** Routes requests to the server with the fastest response time.
 
+## Round Robin Algorithm: 
+
+![RoundRobin](https://github.com/user-attachments/assets/8ac10653-86fa-4ecb-b64d-7922a9840560)
+
 
