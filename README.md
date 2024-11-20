@@ -58,3 +58,23 @@ Below are some of the key characteristics of Load Balancers:
 1. **Hardware Load Balancers:** Physical devices that provide high-performance traffic distribution (e.g., F5, Citrix).
 2. **Software Load Balancers:** Applications installed on servers (e.g., HAProxy, Nginx, Apache).
 3. **Cloud-based Load Balancers:** Managed services provided by cloud providers (e.g., AWS Elastic Load Balancer, Google Cloud Load Balancer).
+
+## Load Balancing Algorithms
+
+We need a load-balancing algorithm to decide which request should be redirected to which backend server. Different systems use different ways to select the servers from the load balancer. Companies use a variety of load-balancing algorithm techniques depending on the configuration. Load balancing algorithms can be broadly categorized into two types: **Static Load Balancing** and **Dynamic Load Balancing**.
+
+### 1. Static Load Balancing Algorithms
+Static load balancing involves predetermined assignment of tasks or resources without considering real-time variations in the system. This approach relies on a fixed allocation of workloads to servers or resources, and it doesn’t adapt to changes during runtime.
+
+**Types of Static Load Balancing Algorithms:**
+- **Round Robin:** Distributes requests sequentially across servers.
+- **Weighted Round-Robin:** Assigns requests to servers based on predefined weights.
+- **Source IP Hash:** Uses a hash of the client’s IP address to determine the server.
+
+### 2. Dynamic Load Balancing Algorithms
+Dynamic load balancing involves making real-time decisions regarding the distribution of incoming network traffic or computing burden among several servers or resources. This method adjusts to the system’s shifting circumstances, including changes in resource availability, network traffic, and server load.
+
+**Types of Dynamic Load Balancing Algorithms:**
+- **Least Connection Method:** Sends requests to the server with the fewest active connections.
+- **Least Response Time Method:** Routes requests to the server with the fastest response time.
+
