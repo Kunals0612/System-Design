@@ -87,3 +87,5 @@ Dynamic load balancing involves making real-time decisions regarding the distrib
 ![weighted](https://github.com/user-attachments/assets/0211cc73-54c4-4aca-ba14-16a689e36ab3)
 
 ## Source IP Hash Based Algorithm:
+
+![HashIP](https://github.com/user-attachments/assets/480a023e-1b90-4a94-9b36-5147d79d48aa)
