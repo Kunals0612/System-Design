@@ -142,3 +142,9 @@ Sharding is a very important concept that helps the system to keep data in diffe
   - Each shard reads and writes its own data.
   - Many NoSQL databases offer auto-sharding.
   - Failure of one shard doesn’t effect the data processing of other shards.
+
+## **Benefits of Sharding:**
+- **Improved Scalability:** Sharding allows the system to scale horizontally by adding more servers or nodes as the data grows. This improves the system’s capacity to handle large volumes of data and requests.
+- **Increased Performance:** Sharding distributes the data across multiple servers or nodes, which improves the system’s performance by reducing the load on each server or node. This results in faster response times and better throughput.
+- **Fault Tolerance:** Sharding provides a degree of fault tolerance as the system can continue to function even if one or more servers or nodes fail. This is because the data is replicated across multiple servers or nodes, and if one        fails, the others can continue to serve the requests.
+- **Reduced Costs:** Sharding allows the system to scale horizontally, which can be more cost-effective than scaling vertically by upgrading hardware. This is because horizontal scaling can be done using commodity hardware, which is          typically less expensive than high-end servers.
