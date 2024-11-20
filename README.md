@@ -25,7 +25,7 @@ There will be a limitation on the number of requests that a web server can handl
 
 Without a load balancer, adding more servers to share the traffic is complicated. All requests are stuck with one server, and adding new servers won’t automatically solve the load issue.
 
-
+![WithLoadBalancer](https://github.com/user-attachments/assets/7364b7d8-0650-4b36-8b97-68566f86def5)
 
 Below are some of the key characteristics of Load Balancers:
 
