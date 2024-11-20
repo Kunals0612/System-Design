@@ -131,3 +131,14 @@ Consistent hashing is a popular technique used in distributed systems to address
 Sharding is a very important concept that helps the system to keep data in different resources according to the sharding process. The word “Shard” means “a small part of a whole“. Hence Sharding means dividing a larger part into smaller parts. In DBMS, Sharding is a type of DataBase partitioning in which a large database is divided or partitioned into smaller data and different nodes. These shards are not only smaller, but also faster and hence easily manageable. 
 
 ![sharding](https://github.com/user-attachments/assets/b5d1b1a0-234d-4742-84ad-783bd429cc42)
+
+## **Features of Sharding:**
+
+  - Sharding makes the Database smaller
+  - Sharding makes the Database faster
+  - Sharding makes the Database much more easily manageable
+  - Sharding can be a complex operation sometimes
+  - Sharding reduces the transaction cost of the Database
+  - Each shard reads and writes its own data.
+  - Many NoSQL databases offer auto-sharding.
+  - Failure of one shard doesn’t effect the data processing of other shards.
