@@ -123,4 +123,6 @@ Consistent hashing is a popular technique used in distributed systems to address
 
 ## After removing server
 
+![ReplicaServerRemoving](https://github.com/user-attachments/assets/d2d7892e-11d2-497a-aaad-d5e00d8f3ed1)
+
 
