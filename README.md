@@ -117,6 +117,8 @@ Consistent hashing is a popular technique used in distributed systems to address
 
 ![ConsistentHashingRemoving](https://github.com/user-attachments/assets/60a377b4-eebb-4a59-b076-7354b12149a2)
 
+## To Reduce the ReHashing (Replica Server)
+
 
 
 
