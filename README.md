@@ -14,3 +14,8 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
   - What is a Cache?
   - What is Thrashing?
   - What are Threads?
+
+-[**Load Balancer**]()
+   - What is Load Balancing?
+   - What is Consistent Hashing?
+   - What is Sharding?
