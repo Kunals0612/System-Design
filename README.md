@@ -7,6 +7,16 @@ A load balancer is a crucial component in system design that distributes incomin
 Load balancers are highly used in cloud computing domains, data centers, and large-scale web applications where traffic flow needs to be managed.
 It simply distributes the set of requested operations effectively across multiple servers and ensures that no single server bears too many requests.
 
+## How Load Balancer Works?
+
+Let us see how a load balancer works in simple steps:
+
+1. **Receives Incoming Requests:** When users try to access a website or application, their requests first go to the load balancer instead of directly to a server.
+2. **Checks Server Health:** The load balancer continuously monitors the status of all servers. It checks which servers are healthy and ready to handle requests.
+3. **Distributes Traffic:** Based on factors like server load, response time, or proximity, the load balancer forwards each request to the most appropriate server. This helps avoid any server getting overloaded.
+4. **Handles Server Failures:** If a server goes down or becomes unresponsive, the load balancer automatically stops sending traffic to that server and redirects it to others that are still functioning properly.
+5. **Optimizes Performance:** By spreading traffic efficiently and using healthy servers, load balancers improve overall performance and reduce delays.
+
 ## What will happen if there is NO Load Balancer?
 
 ![NoBalancer](https://github.com/user-attachments/assets/8347ac6d-acbe-4737-a279-640c29a368eb)
