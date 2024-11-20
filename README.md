@@ -104,6 +104,15 @@ Consistent hashing is a distributed hashing technique used in computer science a
 
 ![ConsistentHashing](https://github.com/user-attachments/assets/2d7ef2c7-e825-4bc0-8c0a-a97aa581edfa)
 
+**What is the use of Consistent Hashing?**
+
+Consistent hashing is a popular technique used in distributed systems to address the challenge of efficiently distributing keys or data elements across multiple nodes/servers in a network. Consistent hashing’s primary objective is to reduce the number of remapping operations necessary when adding or removing nodes from the network, which contributes to the stability and dependability of the system.
+
+- Consistent hashing can be used in to share the burden among nodes and lessen the effects of node failures.
+- For example, when a new node is added to the network, only a small number of keys are remapped to the new node, which helps to reduce the overhead associated with the addition.
+- Similarly, when a node fails, only a small number of keys are affected, which helps to minimize the impact of the failure on the system as a whole.  
+- Consistent hashing is also useful in ensuring data availability and consistency in a distributed system.
+
 ## After Failure of any server
 
 ![ConsistentHashingRemoving](https://github.com/user-attachments/assets/60a377b4-eebb-4a59-b076-7354b12149a2)
