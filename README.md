@@ -82,4 +82,5 @@ Dynamic load balancing involves making real-time decisions regarding the distrib
 
 ![RoundRobin](https://github.com/user-attachments/assets/8ac10653-86fa-4ecb-b64d-7922a9840560)
 
+## Weighted Round Robin:
 
