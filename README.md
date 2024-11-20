@@ -11,7 +11,7 @@ It simply distributes the set of requested operations effectively across multipl
 
 ![NoBalancer](https://github.com/user-attachments/assets/8347ac6d-acbe-4737-a279-640c29a368eb)
 
-**There are three main problems with this model:**
+### **There are three main problems with this model:**
 
 **Single Point of Failure:**
 
