@@ -92,4 +92,4 @@ Dynamic load balancing involves making real-time decisions regarding the distrib
 
 ## Least Connection Based Algorithm:
 
-
+![LeastConnection](https://github.com/user-attachments/assets/5cfe098c-5ce9-4802-b3bd-8bf84eea4c6c)
