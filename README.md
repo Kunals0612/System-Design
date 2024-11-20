@@ -119,6 +119,8 @@ Consistent hashing is a popular technique used in distributed systems to address
 
 ## To Reduce the ReHashing (Replica Server)
 
+![ReplicaServer](https://github.com/user-attachments/assets/eff26ca7-62e5-41c9-b2d6-61d194b3241b)
 
+## After removing server
 
 
