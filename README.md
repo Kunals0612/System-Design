@@ -74,6 +74,11 @@ Static load balancing involves predetermined assignment of tasks or resources wi
 ### 2. Dynamic Load Balancing Algorithms
 Dynamic load balancing involves making real-time decisions regarding the distribution of incoming network traffic or computing burden among several servers or resources. This method adjusts to the system’s shifting circumstances, including changes in resource availability, network traffic, and server load.
 
+# Round Robin 
+
+---
+
+
 **Types of Dynamic Load Balancing Algorithms:**
 - **Least Connection Method:** Sends requests to the server with the fewest active connections.
 - **Least Response Time Method:** Routes requests to the server with the fastest response time.
