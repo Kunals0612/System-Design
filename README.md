@@ -15,7 +15,7 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
   - What is Thrashing?
   - What are Threads?
 
-- [**Load Balancer**]()
+- [**Load Balancer**](https://github.com/Kunals0612/System-Design/tree/Load-Balancing)
    - What is Load Balancing?
    - What is Consistent Hashing?
    - What is Sharding?
