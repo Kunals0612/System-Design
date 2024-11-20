@@ -126,3 +126,7 @@ Consistent hashing is a popular technique used in distributed systems to address
 ![ReplicaServerRemoving](https://github.com/user-attachments/assets/d2d7892e-11d2-497a-aaad-d5e00d8f3ed1)
 
 
+# What is Sharding ?
+
+Sharding is a very important concept that helps the system to keep data in different resources according to the sharding process. The word “Shard” means “a small part of a whole“. Hence Sharding means dividing a larger part into smaller parts. In DBMS, Sharding is a type of DataBase partitioning in which a large database is divided or partitioned into smaller data and different nodes. These shards are not only smaller, but also faster and hence easily manageable. 
+
