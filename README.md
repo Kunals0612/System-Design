@@ -308,3 +308,100 @@ Suppose an e-commerce platform uses **Range-Based Sharding** to store product pr
   To find products in the `$101 - $500` range, the query is sent to **Shard 1**.
 
 ---
+
+# Directory-Based Sharding
+
+**Directory-based sharding** is a sharding technique where a central directory maps keys (or key ranges) to specific shards. This directory acts as an intermediary that helps determine the shard where a particular piece of data resides.
+
+---
+
+## How It Works
+
+1. **Central Directory**:
+   - A central lookup table (directory) maintains mappings of keys or key ranges to shards.
+   - Example: `Key → Shard` or `Range → Shard`.
+
+2. **Shard Assignment**:
+   - When data needs to be stored or retrieved, the directory is consulted to identify the correct shard.
+
+3. **Data Storage and Retrieval**:
+   - The directory guides operations like insertion, update, and retrieval by directing requests to the appropriate shard.
+
+---
+
+## Example
+
+Imagine a system storing data for user accounts. The central directory contains the following mappings:
+
+| Key/Range        | Shard    |
+|-------------------|----------|
+| 1 - 1000          | Shard 0  |
+| 1001 - 2000       | Shard 1  |
+| 2001 - 3000       | Shard 2  |
+| 3001 - 4000       | Shard 3  |
+
+### Data Insert Example:
+- For `UserID = 2345`:  
+  - The directory maps the range `2001 - 3000` to **Shard 2**.  
+  - Data is stored in **Shard 2**.
+
+### Data Retrieval Example:
+- To retrieve `UserID = 950`:  
+  - The directory maps the range `1 - 1000` to **Shard 0**.  
+  - Data is retrieved from **Shard 0**.
+
+---
+
+## Advantages
+
+- **Flexibility**:
+  - The directory allows custom and dynamic shard assignments, unlike rigid methods like key-based or range-based sharding.
+
+- **Easily Scalable**:
+  - Adding or removing shards is straightforward; the directory is updated to reflect new mappings.
+
+- **Handles Complex Distributions**:
+  - Useful when keys or data distribution is irregular or uneven.
+
+---
+
+## Challenges
+
+- **Single Point of Failure**:
+  - The central directory becomes a critical component; its failure can disrupt the entire system.
+
+- **Performance Overhead**:
+  - Frequent lookups to the directory may introduce latency.
+
+- **Directory Maintenance**:
+  - Keeping the directory updated and consistent requires effort, especially in dynamic environments.
+
+---
+
+## Applications
+
+- **Dynamic Systems**: Systems where data distribution changes frequently.
+- **Irregular Distributions**: Scenarios where keys or ranges are not uniformly distributed.
+- **Complex Partitioning Rules**: Systems with customized sharding rules based on data characteristics.
+
+---
+
+## Example Use Case
+
+Imagine a global content delivery platform where shards are located in different regions:
+
+| Region           | Shard    |
+|-------------------|----------|
+| North America     | Shard 0  |
+| Europe            | Shard 1  |
+| Asia              | Shard 2  |
+| Australia         | Shard 3  |
+
+- **Insert Data**:  
+  A user from **Asia** is assigned to **Shard 2** based on the directory.
+
+- **Retrieve Data**:  
+  A lookup for a user in **Europe** consults the directory, which directs the query to **Shard 1**.
+
+---
+
