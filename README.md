@@ -102,6 +102,7 @@ When we want to add an item to the filter:
 
 Bit array after adding **"geeks"**:  
 
+## [0, 1, 0, 0, 1, 0, 0, 1, 0, 0]
 
 - Now, we insert **"nerd"**:  
   \( h_1(\text{"nerd"}) \% 10 = 3 \)  
@@ -111,6 +112,7 @@ Bit array after adding **"geeks"**:
 
 Bit array after adding **"nerd"**:  
 
+## [0, 1, 0, 1, 1, 1, 0, 1, 0, 0]
 
 ---
 
