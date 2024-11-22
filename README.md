@@ -173,6 +173,8 @@ However, this comes at the cost of higher memory usage and slower operations.
 
 ---
 
+![DatabaseReplica](https://github.com/user-attachments/assets/c284a604-43e6-4756-9aa9-6dca238b271b)
+
 ## **Types of Data Replication**
 
 1. **Synchronous Replication**:
