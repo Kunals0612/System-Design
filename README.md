@@ -76,3 +76,131 @@ A Bloom Filter is backed by a bit array of length \( m \), initially all set to 
 
 ### Distributed Systems:
 - To manage duplicate detection in systems like **blockchain** or **deduplication services**.
+
+
+# Working of Bloom Filter
+
+A Bloom Filter is a bit array of size \( m \), all initially set to `0`. The filter uses \( k \) hash functions to compute indices for the elements being added or checked.
+
+---
+
+## Insertion in Bloom Filter
+
+When we want to add an item to the filter:
+1. Calculate \( k \) hash values for the item using \( k \) independent hash functions: \( h_1(x), h_2(x), \ldots, h_k(x) \).
+2. Set the bits at the calculated indices in the bit array to `1`.
+
+### Example:
+- Suppose we want to insert **"geeks"** into the filter.  
+  \( m = 10 \) (size of bit array)  
+  \( k = 3 \) (number of hash functions)
+- Hash calculations:  
+  \( h_1(\text{"geeks"}) \% 10 = 1 \)  
+  \( h_2(\text{"geeks"}) \% 10 = 4 \)  
+  \( h_3(\text{"geeks"}) \% 10 = 7 \)  
+- Set the bits at indices \( 1, 4, \) and \( 7 \) to `1`.  
+
+Bit array after adding **"geeks"**:  
+
+
+- Now, we insert **"nerd"**:  
+  \( h_1(\text{"nerd"}) \% 10 = 3 \)  
+  \( h_2(\text{"nerd"}) \% 10 = 5 \)  
+  \( h_3(\text{"nerd"}) \% 10 = 4 \)  
+- Set the bits at indices \( 3, 5, \) and \( 4 \) to `1`.  
+
+Bit array after adding **"nerd"**:  
+
+
+---
+
+## Query (Membership Check)
+
+To check if an element is present in the filter:
+1. Calculate \( k \) hash values for the item using \( k \) hash functions.
+2. Check the bits at the calculated indices:
+   - If **all bits** are set to `1`, the element **might** be present.
+   - If **any bit** is `0`, the element is **definitely not** present.
+
+### Example:
+- To check for **"geeks"**:  
+  \( h_1(\text{"geeks"}) \% 10 = 1 \)  
+  \( h_2(\text{"geeks"}) \% 10 = 4 \)  
+  \( h_3(\text{"geeks"}) \% 10 = 7 \)  
+- Bits at indices \( 1, 4, \) and \( 7 \) are all `1`. Therefore, **"geeks"** might be present.
+
+---
+
+## False Positives in Bloom Filters
+
+Bloom Filters are probabilistic, meaning they may return **false positives**. This happens when bits set by other elements overlap with those for the queried item.
+
+### Example:
+- Checking for **"cat"**:  
+  \( h_1(\text{"cat"}) \% 10 = 1 \)  
+  \( h_2(\text{"cat"}) \% 10 = 3 \)  
+  \( h_3(\text{"cat"}) \% 10 = 7 \)  
+- Bits at indices \( 1, 3, \) and \( 7 \) are all set to `1`, but **"cat"** was never added.  
+- This is a **false positive** result.
+
+---
+
+## Reducing False Positives
+
+False positives can be reduced by:
+- Increasing the size of the bit array (\( m \)).
+- Increasing the number of hash functions (\( k \)).
+
+However, this comes at the cost of higher memory usage and slower operations.
+
+---
+
+## Operations Supported by a Bloom Filter:
+- **Insert(x):** Insert an element into the Bloom Filter.
+- **Lookup(x):** Check if an element is already present in the Bloom Filter (with a false-positive probability).
+
+### Note:
+- Bloom Filters do **not support deletion** of elements.
+
+---
+
+## Probability of False Positives
+
+The probability of a false positive (\( P \)) can be calculated as:
+
+\[
+P = \left( 1 - \left[ 1 - \frac{1}{m} \right]^{kn} \right)^k
+\]
+
+Where:
+- \( m \): Size of the bit array.
+- \( k \): Number of hash functions.
+- \( n \): Number of elements expected to be inserted.
+
+---
+
+## Size of Bit Array
+
+If \( n \) (expected number of elements) and \( P \) (desired false positive probability) are known, the size of the bit array (\( m \)) can be calculated as:
+
+\[
+m = -\frac{n \ln P}{(\ln 2)^2}
+\]
+
+---
+
+## Optimum Number of Hash Functions
+
+The optimal number of hash functions (\( k \)) is given by:
+
+\[
+k = \frac{m}{n} \ln 2
+\]
+
+---
+
+## Space Efficiency
+
+Bloom Filters are highly space-efficient and are ideal for applications where memory is constrained, and false positives are tolerable.
+
+
