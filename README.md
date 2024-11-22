@@ -20,7 +20,7 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
    - What is Consistent Hashing?
    - What is Sharding?
 
-- [**Data Stores**]()
+- [**Data Stores**](https://github.com/Kunals0612/System-Design/tree/DataStores)
   - What are Bloom Filters?
   - What is Data Replication?
   - How are NoSQL databases optimized?
