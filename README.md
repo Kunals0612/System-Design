@@ -4,6 +4,8 @@ A **Bloom Filter** is a space-efficient, probabilistic data structure used to te
 
 ---
 
+![bloomFilters](https://github.com/user-attachments/assets/6157189e-a6cd-4927-96f7-e83ce26df2e2)
+
 ## Key Features of Bloom Filters:
 
 ### Probabilistic Nature:
