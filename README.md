@@ -209,4 +209,11 @@ Sharding is a very important concept that helps the system to keep data in diffe
 Imagine you have **4 shards** (Shard 0 to Shard 3) and want to store data for `UserID = 12345`.
 
 1. Apply the hash function:
+2. Calculate the shard index:
+3. Store the data in **Shard 2**.
+
+For retrieval, the same process maps `UserID = 12345` to **Shard 2**.
+
+---
+
 
