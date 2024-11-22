@@ -216,4 +216,95 @@ For retrieval, the same process maps `UserID = 12345` to **Shard 2**.
 
 ---
 
+# Range-Based Sharding
 
+**Range-based sharding** is a data distribution technique in which data is divided across multiple shards (or partitions) based on the value of a key. The key values are grouped into predefined ranges, and each range is assigned to a specific shard.
+
+---
+
+## How It Works
+
+1. **Key Selection**:
+   - A key (e.g., user ID, date, product price) is chosen to partition the data.
+   - This key is used to determine which shard the data belongs to.
+
+2. **Define Ranges**:
+   - The key space is divided into non-overlapping ranges.
+   - Each range is assigned to a specific shard.
+
+3. **Shard Assignment**:
+   - When inserting or querying data, the key's value is checked against the defined ranges to determine the appropriate shard.
+
+---
+
+## Example
+
+Imagine we are sharding data for a database storing user information, with user IDs ranging from `1` to `1000`. The ranges and shard assignments could look like this:
+
+| Range       | Shard    |
+|-------------|----------|
+| 1 - 250     | Shard 0  |
+| 251 - 500   | Shard 1  |
+| 501 - 750   | Shard 2  |
+| 751 - 1000  | Shard 3  |
+
+### Data Insert Example:
+- For `UserID = 345`:  
+  - `345` falls in the range `251 - 500`, so the data is stored in **Shard 1**.
+
+### Data Retrieval Example:
+- To retrieve `UserID = 800`:  
+  - `800` falls in the range `751 - 1000`, so the data is retrieved from **Shard 3**.
+
+---
+
+## Advantages
+
+- **Simplicity**:
+  - Easy to implement and understand.
+  - Efficient when the key distribution is uniform and ranges are well-balanced.
+
+- **Predictability**:
+  - Knowing the key's range allows direct access to the appropriate shard.
+
+---
+
+## Challenges
+
+- **Imbalanced Shards**:
+  - If the key distribution is skewed, some shards may hold more data than others, causing hotspots.
+
+- **Range Overlaps**:
+  - Incorrect range definitions or key assignments can lead to overlaps or gaps.
+
+- **Scalability**:
+  - Adding new shards requires redefining ranges and redistributing data, which can be resource-intensive.
+
+---
+
+## Applications
+
+- **Time-series Data**: Storing logs or events where the key is a timestamp (e.g., ranges based on months or years).
+- **Financial Data**: Dividing data based on numeric ranges, like customer IDs or account numbers.
+- **E-commerce**: Partitioning data by product price ranges or order IDs.
+
+---
+
+## Example Use Case
+
+Suppose an e-commerce platform uses **Range-Based Sharding** to store product prices:
+
+| Price Range ($) | Shard    |
+|------------------|----------|
+| 0 - 100          | Shard 0  |
+| 101 - 500        | Shard 1  |
+| 501 - 1000       | Shard 2  |
+| 1001+            | Shard 3  |
+
+- **Insert Product**:  
+  A product priced at `$750` will be stored in **Shard 2**.
+
+- **Query Product**:  
+  To find products in the `$101 - $500` range, the query is sent to **Shard 1**.
+
+---
