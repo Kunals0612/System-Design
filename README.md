@@ -148,3 +148,65 @@ Sharding is a very important concept that helps the system to keep data in diffe
 - **Increased Performance:** Sharding distributes the data across multiple servers or nodes, which improves the system’s performance by reducing the load on each server or node. This results in faster response times and better throughput.
 - **Fault Tolerance:** Sharding provides a degree of fault tolerance as the system can continue to function even if one or more servers or nodes fail. This is because the data is replicated across multiple servers or nodes, and if one        fails, the others can continue to serve the requests.
 - **Reduced Costs:** Sharding allows the system to scale horizontally, which can be more cost-effective than scaling vertically by upgrading hardware. This is because horizontal scaling can be done using commodity hardware, which is          typically less expensive than high-end servers.
+
+# Key-Based Sharding
+
+**Key-based sharding**, also known as **hash-based sharding**, is a technique used to distribute data across multiple shards (or partitions) in a database or distributed system. It ensures efficient and predictable data distribution based on a hash value derived from a key.
+
+---
+
+## How It Works
+
+1. **Key Selection**:
+   - Each record or piece of data has a key (e.g., user ID, product ID).
+   - This key uniquely identifies the data.
+
+2. **Hash Function**:
+   - A hash function is applied to the key to generate a numeric value (hash value).
+   - Common hash functions include MD5, SHA-256, or simpler functions like modulo arithmetic.
+
+3. **Shard Assignment**:
+   - The hash value is used to determine which shard the data should be stored in.  
+   - For example:
+     ```
+     Shard Index = (Hash(Key) % Number of Shards)
+     ```
+
+4. **Data Storage and Retrieval**:
+   - The calculated shard index points to a specific shard where the data is stored.
+   - To retrieve data, the same hash function is applied to the key, and the corresponding shard is queried.
+
+---
+
+## Advantages
+
+- **Even Distribution**: Ensures data is evenly distributed across shards, minimizing hotspots.
+- **Scalability**: Shards can be located on different servers, allowing horizontal scaling.
+- **Quick Lookup**: Efficient computation of shard index using the hash function.
+- **Deterministic**: Guarantees that the same key will always map to the same shard.
+
+---
+
+## Challenges
+
+- **Resharding**: Adding or removing shards requires rehashing, which can be resource-intensive.
+- **Hash Collisions**: Rare with good hash functions but must be handled appropriately.
+- **Uneven Key Distribution**: Poorly designed hash functions or key distributions can lead to imbalances.
+- **Join Queries**: Performing cross-shard queries (e.g., joins) can be complex and slower.
+
+---
+
+## Applications
+
+- **Databases**: Distributed systems like MongoDB, Cassandra, and DynamoDB.
+- **Caching Systems**: Systems like Redis and Memcached.
+- **Large-scale Applications**: Social networks, e-commerce platforms, etc.
+
+---
+
+## Example
+
+Imagine you have **4 shards** (Shard 0 to Shard 3) and want to store data for `UserID = 12345`.
+
+1. Apply the hash function:
+
