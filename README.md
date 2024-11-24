@@ -69,3 +69,55 @@ In distributed systems and databases, different levels of consistency are used t
 ---
 
 Understanding data consistency levels helps design systems that meet specific application requirements for performance, reliability, and scalability.
+
+## Transaction Isolation Levels
+
+Transaction isolation levels define the degree to which transactions are isolated from each other in a database. They determine how changes made in one transaction are visible to other transactions, helping balance performance and consistency.
+
+### Types of Isolation Levels (Defined by SQL Standard)
+
+### 1. **Read Uncommitted**
+- **Description**: Transactions can read data that has been modified but not yet committed by other transactions.
+- **Advantages**: Fastest isolation level; no locking overhead.
+- **Disadvantages**: Allows **dirty reads** (reading uncommitted changes), leading to potential inconsistencies.
+- **Use Case**: Scenarios where accuracy is less critical than performance.
+
+### 2. **Read Committed**
+- **Description**: Transactions can only read data that has been committed by other transactions.
+- **Advantages**: Prevents dirty reads; ensures a higher level of consistency compared to `Read Uncommitted`.
+- **Disadvantages**: Allows **non-repeatable reads** (data might change if read again within the same transaction).
+- **Use Case**: Most common isolation level, providing a balance between consistency and performance.
+
+### 3. **Repeatable Read**
+- **Description**: Ensures that if a transaction reads the same data twice, it will see the same value, even if other transactions are updating the data.
+- **Advantages**: Prevents dirty reads and non-repeatable reads.
+- **Disadvantages**: Allows **phantom reads** (new rows can appear in subsequent reads due to inserts by other transactions).
+- **Use Case**: Scenarios requiring consistent reads but not complete isolation.
+
+### 4. **Serializable**
+- **Description**: Ensures complete isolation of transactions by serializing them (executing sequentially).
+- **Advantages**: Prevents dirty reads, non-repeatable reads, and phantom reads; provides the highest level of consistency.
+- **Disadvantages**: Slowest isolation level; high locking overhead and reduced concurrency.
+- **Use Case**: Applications requiring absolute accuracy, such as financial systems.
+
+---
+
+### Phenomena Addressed by Isolation Levels
+
+| Isolation Level      | Dirty Reads | Non-Repeatable Reads | Phantom Reads |
+|-----------------------|-------------|-----------------------|---------------|
+| **Read Uncommitted** | Possible    | Possible             | Possible      |
+| **Read Committed**   | Prevented   | Possible             | Possible      |
+| **Repeatable Read**  | Prevented   | Prevented            | Possible      |
+| **Serializable**     | Prevented   | Prevented            | Prevented     |
+
+---
+
+### Choosing the Right Isolation Level
+- **Low Concurrency Needs**: Use `Serializable` for maximum consistency.
+- **Moderate Concurrency Needs**: Use `Repeatable Read` or `Read Committed` for a balance of consistency and performance.
+- **High Concurrency Needs**: Use `Read Uncommitted` for minimal locking but with consistency trade-offs.
+
+---
+
+Transaction isolation levels are crucial for managing concurrency and ensuring data integrity in multi-user database systems. Choose the level that best aligns with your application's requirements for consistency, concurrency, and performance.
