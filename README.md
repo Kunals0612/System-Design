@@ -139,3 +139,62 @@ Event-driven system architecture is a design paradigm where the flow of the prog
 document.getElementById("myButton").addEventListener("click", () => {
     console.log("Button was clicked!");
 });
+```
+
+# Using a Database as a Message Queue
+
+## Overview
+A **database as a message queue** uses a database table to store and manage messages for asynchronous communication. It is a simple solution for small-scale applications or where introducing dedicated message queuing systems is not feasible.
+
+---
+
+## How It Works
+1. **Producer**:
+   - Inserts messages (or tasks) into a designated table in the database.
+2. **Consumer**:
+   - Polls the table to retrieve messages, processes them, and marks them as processed.
+
+---
+
+## Steps to Implement
+
+### 1. Create a Messages Table
+Define a table to store messages:
+
+```sql
+CREATE TABLE message_queue (
+    id SERIAL PRIMARY KEY,
+    message TEXT NOT NULL,
+    status VARCHAR(20) DEFAULT 'new',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO message_queue (message) VALUES ('{"task": "send_email", "email": "user@example.com"}');
+
+-- Retrieve a new message
+SELECT * FROM message_queue WHERE status = 'new' ORDER BY created_at LIMIT 1 FOR UPDATE SKIP LOCKED;
+
+-- Mark as processing
+UPDATE message_queue SET status = 'processing' WHERE id = 1;
+
+-- After processing
+UPDATE message_queue SET status = 'processed' WHERE id = 1;
+
+```
+
+## Advantages
+- **Simplicity**: No need to introduce additional infrastructure; uses the existing database.
+- **Persistence**: Messages are stored reliably in the database until processed.
+- **Familiarity**: Developers already familiar with database operations can easily implement this pattern.
+
+## Disadvantages
+- **Scalability**: Databases are not optimized for high-throughput messaging; performance may degrade under heavy load.
+- **Polling Overhead**: Consumers need to poll the database frequently, which can lead to increased latency and load.
+- **Lack of Advanced Features**: Missing features like message prioritization, retries, or dead-letter queues found in dedicated message queue systems.
+
+## When to Use
+- Small-scale applications where throughput requirements are low.
+- Prototyping or development phases where simplicity is critical.
+- Scenarios where introducing a dedicated message broker is not feasible due to resource constraints.
+
