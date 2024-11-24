@@ -58,3 +58,6 @@ print("Order sent to queue!")
 
 # Close connection
 connection.close()
+
+```java
+system.out.println("Hello");
