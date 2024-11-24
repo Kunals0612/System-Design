@@ -57,7 +57,4 @@ channel.basic_publish(exchange='', routing_key='order_queue', body='Order #1: Pi
 print("Order sent to queue!")
 
 # Close connection
-connection.close()
-
-```java
-system.out.println("Hello");
+connection.close() 
