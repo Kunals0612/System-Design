@@ -4,6 +4,8 @@
 ## What is a Message Queue?
 A **message queue** is a communication system used to facilitate asynchronous message passing between different components of a system. It enables the exchange of information (messages) between producers (senders) and consumers (receivers) without requiring them to interact directly or simultaneously.
 
+![MessageQueue](https://github.com/user-attachments/assets/f7567aaa-4e28-4051-87c0-e5882a2972cd)
+
 ### Key Concepts
 1. **Producer**: The component that sends messages to the queue.
 2. **Consumer**: The component that retrieves messages from the queue.
