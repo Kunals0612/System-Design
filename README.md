@@ -60,3 +60,79 @@ print("Order sent to queue!")
 
 # Close connection
 connection.close() 
+```
+
+# Event-Driven System Architecture
+
+## Overview
+Event-driven system architecture is a design paradigm where the flow of the program is determined by events, such as user actions (e.g., clicks, key presses), sensor outputs, or messages from other systems. This architecture is widely used in systems requiring responsiveness and real-time processing.
+
+---
+
+## Key Components
+1. **Event Producers**:
+   - Generate events that represent a change or trigger in the system.
+   - Examples: User inputs, IoT sensors, system-generated notifications.
+
+2. **Event Consumers**:
+   - Components that listen for and respond to specific events.
+   - Examples: User interface updates, data processing modules.
+
+3. **Event Channels**:
+   - Middleware or messaging infrastructure that routes events from producers to consumers.
+   - Examples: Kafka, RabbitMQ, or in-memory systems like JavaScript’s event loop.
+
+4. **Event Handlers**:
+   - Functions or services that process events and perform appropriate actions.
+
+---
+
+## How Event-Driven Systems Work
+1. An **event** occurs (e.g., a user clicks a button).
+2. The **event producer** generates and sends an event to an event channel or bus.
+3. The **event handler** subscribes to the event, processes it, and performs the required action.
+
+---
+
+## Advantages
+- **Responsiveness**: Enables real-time processing for interactive systems.
+- **Scalability**: Components can be scaled independently.
+- **Decoupling**: Producers and consumers operate without knowing about each other.
+- **Flexibility**: New event handlers can be added easily.
+
+---
+
+## Disadvantages
+- **Complexity**: Debugging and maintenance can be challenging due to the asynchronous nature.
+- **Overhead**: High event volumes may require robust infrastructure.
+- **Latency**: Event propagation through middleware may introduce delays.
+
+---
+
+## Examples of Event-Driven Architecture
+
+### 1. GUI Applications
+- Events like button clicks, form submissions, or mouse movements trigger handlers to perform actions.
+
+### 2. IoT Systems
+- Sensors generate events (e.g., temperature exceeds a threshold).
+- Event handlers process data and trigger actions (e.g., turn on cooling systems).
+
+### 3. Microservices
+- Services emit events (e.g., order placed).
+- Other services listen and react (e.g., payment processing, notification sending).
+
+### 4. Real-Time Analytics
+- Platforms like Apache Kafka handle events (e.g., log data, user actions) for monitoring or visualization.
+
+---
+
+## Simple Example: JavaScript Event Handling
+
+```javascript
+// HTML: <button id="myButton">Click Me!</button>
+
+// JavaScript:
+document.getElementById("myButton").addEventListener("click", () => {
+    console.log("Button was clicked!");
+});
