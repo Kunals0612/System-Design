@@ -26,3 +26,8 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
   - How are NoSQL databases optimized?
   - What are Location-based Databases?
   - Database Migrations
+
+- [**Consistency VS Avalibility**](https://github.com/Kunals0612/System-Design/tree/ConAva)
+    - What is Data Consistency?
+    - Data Consistency Levels
+    - Transaction Isolation Levels
