@@ -69,6 +69,9 @@ Event-driven system architecture is a design paradigm where the flow of the prog
 
 ---
 
+![Event](https://github.com/user-attachments/assets/7551f2a9-c983-4bc8-ae7b-08ee938119bf)
+
+
 ## Key Components
 1. **Event Producers**:
    - Generate events that represent a change or trigger in the system.
