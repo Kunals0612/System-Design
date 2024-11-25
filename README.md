@@ -31,3 +31,9 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
     - What is Data Consistency?
     - Data Consistency Levels
     - Transaction Isolation Levels
+
+- [**Message Queues]()
+      - What is a Message Queue?
+      - What is the publisher-subscriber model?
+      - What are event-driven systems?
+      - Database as a Message Queue
