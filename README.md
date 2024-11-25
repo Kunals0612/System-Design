@@ -32,8 +32,16 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
     - Data Consistency Levels
     - Transaction Isolation Levels
 
-- [**Message Queues**]()
+- [**Message Queues**](https://github.com/Kunals0612/System-Design/tree/MessageQueues)
     - What is a Message Queue?
     - What is the publisher-subscriber model?
     - What are event-driven systems?
     - Database as a Message Queue
+
+- [**DevOps Concept]()
+    - What is a Single Point of Failure?
+    - What are Containers?
+    - What is Service Discovery and Heartbeats?
+    - How to avoid Cascading Failures?
+    - Anomaly Detection in Distributed Systems
+    - Distributed Rate Limiting
