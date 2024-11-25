@@ -32,7 +32,7 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
     - Data Consistency Levels
     - Transaction Isolation Levels
 
-- [**Message Queues]()
+- [**Message Queues**]()
       - What is a Message Queue?
       - What is the publisher-subscriber model?
       - What are event-driven systems?
