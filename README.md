@@ -2,6 +2,8 @@
 
 A **Single Point of Failure (SPOF)** is a part of a system, process, or infrastructure that, if it fails, causes the entire system to stop functioning or become inoperable. It is a critical weakness in a system's design because the reliability and availability of the entire system depend on this single component.
 
+![SPOF](https://github.com/user-attachments/assets/5bb17429-b799-4ccb-8596-498034b15f45)
+
 ## Characteristics of SPOF:
 1. **Critical Dependency**: The system cannot function without this component.
 2. **High Risk**: If this point fails, it can result in downtime, loss of service, or data loss.
