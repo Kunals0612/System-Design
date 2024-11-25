@@ -33,7 +33,7 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
     - Transaction Isolation Levels
 
 - [**Message Queues**]()
-      - What is a Message Queue?
-      - What is the publisher-subscriber model?
-      - What are event-driven systems?
-      - Database as a Message Queue
+    - What is a Message Queue?
+    - What is the publisher-subscriber model?
+    - What are event-driven systems?
+    - Database as a Message Queue
