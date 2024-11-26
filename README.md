@@ -285,3 +285,94 @@ Anomaly detection in distributed systems involves identifying unusual patterns o
 
 ## **Summary**
 Anomaly detection in distributed systems is vital for maintaining performance, reliability, and security. Combining traditional and advanced AI techniques, leveraging diverse data sources, and adopting scalable tools and frameworks can make this task more effective.
+
+# Distributed Rate Limiting
+
+Distributed rate limiting is a technique to control the rate of requests or actions across multiple distributed systems. It ensures a global rate limit is maintained, even in a multi-node or distributed environment.
+
+---
+
+## Key Concepts
+
+1. **Rate Limit**:
+   - Defines the maximum number of requests allowed per user or client within a given time window.
+2. **Distributed Environment**:
+   - Ensures rate limiting works across multiple servers or services consistently.
+3. **Challenges**:
+   - **Synchronization**: Share state across systems.
+   - **Scalability**: Handle high traffic efficiently.
+   - **Fault Tolerance**: Maintain reliability under failures.
+
+---
+
+## Approaches to Rate Limiting
+
+### Algorithms
+
+- **Token Bucket**: Tokens are added to a bucket at a fixed rate. Requests consume tokens.
+- **Leaky Bucket**: Requests are queued and processed at a fixed rate.
+- **Sliding Window**: Tracks requests within a sliding time window for accuracy.
+- **Fixed Window Counter**: Simple but allows bursts at window boundaries.
+
+---
+
+## Techniques
+
+1. **Centralized Datastore**:
+   - Use tools like Redis to maintain counters.
+2. **Sharded Datastore**:
+   - Distribute counters across nodes for scalability.
+3. **Distributed Coordination**:
+   - Use tools like ZooKeeper or etcd for synchronized counters.
+4. **Local Caching with Sync**:
+   - Reduce latency by maintaining local counters and synchronizing periodically.
+5. **Rate Limiting as a Service**:
+   - Leverage solutions like AWS API Gateway or Kong.
+
+---
+
+## Example: Redis for Distributed Rate Limiting
+
+### Using `INCR` and `EXPIRE` Commands
+
+```cpp
+#include <redis/redis.h>
+#include <iostream>
+#include <string>
+
+// Function to enforce rate limit
+bool isRateLimited(const std::string& key, int limit, int windowSeconds) {
+    redisContext* context = redisConnect("127.0.0.1", 6379);
+    if (!context || context->err) {
+        std::cerr << "Redis connection error!" << std::endl;
+        return false;
+    }
+
+    // Increment the counter
+    redisReply* reply = (redisReply*)redisCommand(context, "INCR %s", key.c_str());
+    int currentCount = reply->integer;
+    freeReplyObject(reply);
+
+    // Set expiry if it's the first increment
+    if (currentCount == 1) {
+        redisCommand(context, "EXPIRE %s %d", key.c_str(), windowSeconds);
+    }
+
+    // Check if limit is exceeded
+    redisFree(context);
+    return currentCount > limit;
+}
+
+int main() {
+    std::string userKey = "user:123";
+    int limit = 100;
+    int windowSeconds = 60;
+
+    if (isRateLimited(userKey, limit, windowSeconds)) {
+        std::cout << "Rate limit exceeded!" << std::endl;
+    } else {
+        std::cout << "Request allowed." << std::endl;
+    }
+    return 0;
+}
+```
