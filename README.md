@@ -4,6 +4,9 @@ Distributed caching is a system that uses multiple servers to store cached data 
 
 ---
 
+![Caching](https://github.com/user-attachments/assets/237c2880-a449-45b6-aa74-bcd68d131b96)
+
+
 ## Key Concepts of Distributed Caching
 
 1. **Caching**:
