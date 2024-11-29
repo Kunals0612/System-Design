@@ -2,6 +2,8 @@
 
 API stands for **Application Programming Interface**. It is a set of rules and protocols that allow different software applications to communicate with each other. APIs act as intermediaries between different systems, enabling them to exchange data or perform operations without knowing each other's internal details.
 
+![api](https://github.com/user-attachments/assets/877f3e6c-7f42-4a28-ad24-085020db05cf)
+
 ## **Types of APIs**
 1. **Web APIs**: Communicate over HTTP/HTTPS (e.g., REST, GraphQL, SOAP).
 2. **Library APIs**: Provide access to specific functionality in a library or framework.
