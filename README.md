@@ -64,3 +64,39 @@ Designing a robust API involves a systematic approach to ensure usability, scala
     }
   }
   ```
+## 6. Secure the API
+
+- **Authentication**: Use methods like OAuth, API keys, or JWT (JSON Web Token).
+- **Rate Limiting**: Prevent abuse by limiting the number of requests.
+- **Data Validation**: Sanitize inputs to prevent injection attacks.
+
+## 7. Version the API
+
+- Add versioning to avoid breaking changes:
+  - Example: `/v1/users` or `/api/v2/orders`.
+
+## 8. Test the API
+
+- **Unit Testing**: Validate individual functionalities.
+- **Integration Testing**: Ensure different modules work together.
+- **Load Testing**: Measure performance under high traffic.
+
+## 9. Document the API
+
+- Provide clear and detailed documentation using tools like:
+  - **Swagger/OpenAPI**: Interactive API docs.
+  - **Postman**: Test and document APIs.
+
+## 10. Monitor and Maintain
+
+- Use tools for logging and monitoring API performance (e.g., **New Relic**, **DataDog**).
+- Update the API as business needs evolve while maintaining backward compatibility.
+
+## Best Practices for API Design
+
+- **Consistency**: Use a uniform naming convention.
+- **Pagination**: Limit large responses (e.g., `GET /users?page=1&limit=20`).
+- **Error Handling**: Provide meaningful error messages.
+- **Caching**: Optimize performance using cache headers (e.g., `ETag`).
+- **Simplify**: Design with ease of use in mind.
+
