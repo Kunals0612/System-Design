@@ -156,3 +156,56 @@ console.log("Executing other tasks...");
 - **Caching**: Optimize performance using cache headers (e.g., `ETag`).
 - **Simplify**: Design with ease of use in mind.
 
+# Asynchronous APIs
+
+Asynchronous APIs allow a client to make a request without waiting for the server to complete its operation. The client can continue executing other tasks and receive the response later, typically via callbacks, events, or promises.
+
+## Key Features of Asynchronous APIs
+
+1. **Non-blocking**:
+   - The client does not need to wait for the server's response to continue executing its code.
+2. **Response Later**:
+   - The server processes the request and sends the response when ready.
+3. **Efficient Resource Utilization**:
+   - Suitable for tasks that involve waiting (e.g., I/O operations) or need concurrent processing.
+
+## Common Implementations
+
+1. **HTTP/REST with Webhooks**:
+   - The server sends a callback to a specified URL once the request is processed.
+   - Example: Payment processing systems like PayPal notify clients asynchronously.
+   
+2. **WebSockets**:
+   - Enables bidirectional communication, where the server can push data to the client whenever available.
+   - Example: Chat applications or live data feeds.
+
+3. **Polling**:
+   - The client periodically checks for the server's response.
+   - Example: Checking the status of a long-running process.
+
+4. **Message Queues**:
+   - Systems like RabbitMQ or Kafka allow asynchronous messaging between producers and consumers.
+   - Example: Microservices communicating asynchronously.
+
+5. **GraphQL Subscriptions**:
+   - Enables clients to listen for real-time updates from the server.
+
+## Benefits of Asynchronous APIs
+
+- **Improved Scalability**: Reduces resource contention by not blocking threads or processes.
+- **Better User Experience**: Users don't experience delays as operations occur in the background.
+- **Real-time Updates**: Enables features like notifications, live feeds, and collaboration tools.
+
+## Example: Asynchronous API in JavaScript
+
+Using `fetch` with a promise-based approach:
+```javascript
+async function fetchData() {
+  console.log("Request sent...");
+  const response = await fetch("https://api.example.com/data");
+  const data = await response.json();
+  console.log("Response received:", data);
+}
+fetchData();
+console.log("Executing other tasks...");
+```
