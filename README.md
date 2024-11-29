@@ -58,3 +58,8 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
 - [**API Gateways**](https://github.com/Kunals0612/System-Design/tree/api)
     - How are APIs designed?
     - What are asynchronous APIs?
+
+- [**Auth**](https://github.com/Kunals0612/System-Design/tree/auth)
+    - OAuth
+    - Token Based Auth
+    - Access Control Lists and Rule Engines
