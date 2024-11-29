@@ -2,6 +2,8 @@
 
 Monolith and Microservices are two architectural styles used for software development. Below is a comparison:
 
+![arch](https://github.com/user-attachments/assets/ab4b7c0d-7112-4ef3-99df-915eb8e70e1b)
+
 ## 1. **Definition**
 - **Monolith**: 
   - A single unified application where all components (UI, business logic, and database) are tightly coupled and run as one unit.
