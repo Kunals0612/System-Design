@@ -176,3 +176,57 @@ A **Content Delivery Network (CDN)** is a geographically distributed network of 
 - **Google Cloud CDN**: Integrated with Google Cloud services.
 - **Microsoft Azure CDN**: Optimized for use with Azure services.
 
+# Caching Policies
+
+Caching policies dictate how data is stored, retrieved, and evicted in a cache to optimize performance and resource utilization. Below are some commonly used caching policies:
+
+## 1. Eviction Policies
+These determine which cached items to remove when the cache is full.
+
+- **Least Recently Used (LRU)**: Removes the least recently accessed data first. Suitable for scenarios where recent access is a good predictor of future access.
+- **Most Recently Used (MRU)**: Removes the most recently accessed data first. Useful in cases where older data is more frequently reused.
+- **First In, First Out (FIFO)**: Evicts the oldest cached data, irrespective of usage.
+- **Least Frequently Used (LFU)**: Removes the data accessed the least number of times.
+- **Random Replacement**: Evicts a randomly selected item. Useful for simplicity in some scenarios.
+
+## 2. Write Policies
+These define how changes to data are handled between the cache and the underlying storage.
+
+- **Write-Through**: Data is written to both the cache and the backing storage simultaneously. Ensures data consistency but may introduce latency.
+- **Write-Back**: Data is written to the cache first and only written to storage when evicted. Improves performance but risks data loss in case of a cache failure.
+- **Write-Around**: Data is written directly to the backing storage, bypassing the cache. This avoids polluting the cache with infrequently accessed data.
+
+## 3. Consistency Policies
+These ensure that the cached data remains consistent with the source data.
+
+- **Strong Consistency**: Guarantees that cache and backing storage always contain the same data. Often used with real-time systems.
+- **Eventual Consistency**: The cache and source data will eventually become consistent, allowing temporary discrepancies. Ideal for distributed systems with high availability.
+- **Lazy Consistency**: Updates to the cache are delayed and occur only when necessary, reducing immediate load on the system.
+
+## 4. Replacement Policies
+Define how new data is inserted into the cache.
+
+- **Priority-Based Replacement**: Assigns a priority to cached data and evicts lower-priority items first.
+- **Segmentation**: Divides the cache into segments for different types of data, ensuring critical data is not prematurely evicted.
+
+## 5. Cache Placement Policies
+These decide where data is cached in multi-layered systems.
+
+- **Direct Mapping**: Maps data to a single, fixed location in the cache.
+- **Fully Associative**: Allows data to be placed anywhere in the cache.
+- **Set Associative**: Combines direct mapping and fully associative approaches by dividing the cache into sets.
+
+## 6. Cache Refresh Policies
+Determine how frequently cached data is updated.
+
+- **Time-to-Live (TTL)**: Each cached item has an expiration time after which it is considered stale.
+- **Periodic Refresh**: Updates the cache at regular intervals.
+- **On-Demand Refresh**: Updates the cache only when requested.
+
+## 7. Admission Policies
+Control whether new data is allowed into the cache.
+
+- **All-Inclusive**: Admits all data into the cache regardless of its type or frequency of access.
+- **Filtered Admission**: Admits only data that meets specific criteria, such as size or frequency of access.
+
+Each caching policy should be chosen based on the system's requirements, such as latency tolerance, data consistency needs, and workload patterns.
