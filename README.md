@@ -63,3 +63,11 @@ Unlock the secrets of building scalable, robust, and efficient systems with our 
     - OAuth
     - Token Based Auth
     - Access Control Lists and Rule Engines
+- [**Tradeoffs**]()
+    - Pull vs. Push
+    - Memory vs. Latency
+    - Throughput vs. Latency
+    - Consistency vs. Availability
+    - Latency vs. Accuracy
+    - SQL vs. NoSQL databases
+
